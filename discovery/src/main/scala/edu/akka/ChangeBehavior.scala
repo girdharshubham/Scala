@@ -33,7 +33,7 @@ object Child {
   }
 }
 
-object ChangeBehavoir {
+object ChangeBehavior {
   def main(arr: Array[String]): Unit = {
     val system = ActorSystem(Driver(), "Root")
 
