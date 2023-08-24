@@ -1,5 +1,7 @@
 import Dependencies._
 
+ThisBuild / semanticdbEnabled := true // enable SemanticDB
+
 lazy val root = (project in file("."))
   .aggregate(voyager)
 
@@ -11,8 +13,9 @@ lazy val voyager = (project in file("voyager"))
 
 lazy val discovery = (project in file("discovery"))
   .settings(
-    scalaVersion := "2.13.11",
-    description  := "Scala 2",
+    scalaVersion      := "2.13.11",
+    description       := "Scala 2",
+    semanticdbVersion := scalafixSemanticdb.revision,
     resolvers += "Akka library repository".at("https://repo.akka.io/maven"),
     libraryDependencies ++= akka,
   )
