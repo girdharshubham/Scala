@@ -19,3 +19,14 @@ lazy val discovery = (project in file("discovery"))
     resolvers += "Akka library repository".at("https://repo.akka.io/maven"),
     libraryDependencies ++= akka,
   )
+
+lazy val parchment = (project in file("parchment"))
+  .settings(
+    scalaVersion      := "2.13.11",
+    description       := "Parchment",
+    semanticdbVersion := scalafixSemanticdb.revision,
+    libraryDependencies ++= Seq(
+      `scala-test`,
+      scalactic,
+    ),
+  )
