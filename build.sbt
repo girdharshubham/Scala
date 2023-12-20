@@ -7,7 +7,7 @@ lazy val root = (project in file("."))
 
 lazy val voyager = (project in file("voyager"))
   .settings(
-    scalaVersion := "3.3.0",
+    scalaVersion := "3.3.1",
     description  := "Scala 3",
   )
 
